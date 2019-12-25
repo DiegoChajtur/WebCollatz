@@ -20,11 +20,11 @@ Para que devuelva la secuencia es necesario enviar una petición ```GET``` con e
 
 Puedes utilizar cURL, Postman, o cualquier cliente ```HTTP```.
 
-Ejemplo en cURL
+Ejemplo en cURL:
 ```bash
 curl -X GET 'http://127.0.0.1:8000/seq/?initnum=11'
 ```
-Respuesta 
+Respuesta:
 ```json
 {"result": "11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1"}
 ```
