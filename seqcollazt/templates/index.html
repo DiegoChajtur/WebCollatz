@@ -1,0 +1,17 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <h1 id="secuencia-de-collatz">Secuencia de Collatz</h1>
+    <p>Web-Service que devuelve en formato JSON,  la secuencia de Collatz según un número inicial</p>
+    <h1 id="instalaci-n">Instalación</h1>
+    <pre><code class="lang-bash">$ pip3 <span class="hljs-keyword">install</span> django</code></pre>
+    <h1 id="ejecuci-n">Ejecución</h1>
+    <pre><code class="lang-bash">$ python3 manage<span class="hljs-selector-class">.py</span> runserver</code></pre>
+    <h1 id="instrucciones">Instrucciones</h1>
+    <p>Para que devuelva la secuencia es necesario enviar una petición <code>GET</code> con el parámetro <code>initnum</code> para entregarle número inicial que permitirá hacer el cálculo de la secuencia</p>
+    <pre><code class="lang-bash"><span class="hljs-attribute">curl</span> -X GET <span class="hljs-string">'http://127.0.0.1:8000/seq/?initnum=11'</span></code></pre>
+    <p>y devolverá la secuencia en formato JSON</p>
+    <pre><code class="lang-json">{<span class="hljs-attr">"result"</span>: <span class="hljs-string">"11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1"</span>}</code></pre>
+  </body>
+</html>
