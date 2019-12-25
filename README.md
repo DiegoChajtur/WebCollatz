@@ -28,3 +28,9 @@ Respuesta:
 ```json
 {"result": "11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1"}
 ```
+
+# Pruebas de funcionamiento
+
+```bash
+$ python3 manage.py test seqcollazt
+```
