@@ -31,6 +31,15 @@ Respuesta:
 
 # Pruebas de funcionamiento
 
+El siguiente script ejecuta todas las pruebas y genera un reporte 
+
 ```bash
-$ python3 manage.py test seqcollazt
+$ ./testAll.sh
 ```
+
+Las pruebas que se realizan son las siguientes:
+
+- testHomePage
+- testResponse
+- testNumOnly
+- testGreaterThanZero

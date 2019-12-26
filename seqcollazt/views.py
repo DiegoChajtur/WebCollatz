@@ -6,9 +6,9 @@ import json
 def calc(request):
     result = ''
     data = {}
-    data['result'] = ''
     try:
-        num = int(request.GET.get('initnum'))
+        param = request.GET.get('initnum')
+        num = int(param)
         if num > 0 :
             while num != 1:
                 if num % 2 == 0:
@@ -21,17 +21,16 @@ def calc(request):
                 result += '1'
             data['result'] = result
             json_data = json.dumps(data)
+            return HttpResponse(json_data, content_type='application/json',status = 200)
         else:
             result = 'El numero debe ser mayor que 0'
-            data['result'] = result
+            data['error'] = result
             json_data = json.dumps(data)
             return HttpResponse(json_data, content_type='application/json',status = 400)
 
-        return HttpResponse(json_data, content_type='application/json',status = 200)
-
     except Exception as e:
         result = 'Debe ingresar solo numeros'
-        data['result'] = result
+        data['error'] = result
         json_data = json.dumps(data)
         return HttpResponse(json_data, content_type='application/json',status = 400)
 
