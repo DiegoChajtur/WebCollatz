@@ -39,7 +39,7 @@ $ ./testAll.sh
 
 Las pruebas que se realizan son las siguientes:
 
-- testHomePage
-- testResponse
-- testNumOnly
-- testGreaterThanZero
+- testHomePage: Realiza una petición esperando como resultado código 200
+- testResponse: Realiza una prueba en el cálculo de la secuencia, comparando un resultado precalculado con la respuesta del servidor
+- testNumOnly: Realiza una prueba si es que se ingresa algún caractér diferente a un número
+- testGreaterThanZero: Realiza una verificación si es que el numero ingresado es mayor a 0
